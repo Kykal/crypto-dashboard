@@ -15,7 +15,6 @@ import { Group, Paper, Stack, Text, Title } from "@mantine/core";
 //Types
 import type { CoinsIdMarketChart } from "../../types/coins-id-market-chart";
 import type { LineChartSeries } from "@mantine/charts";
-import type { ContentType } from "recharts/types/component/Tooltip";
 
 //Main component
 const Chart = () => {
