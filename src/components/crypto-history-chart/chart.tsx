@@ -42,7 +42,7 @@ const Chart = () => {
     return <Text ta="center">Loading...</Text>;
   }
 
-  if (response?.error) {
+  if ((response as any as { error: string })?.error) {
     return (
       <Text ta="center" c="red.7">
         Error
