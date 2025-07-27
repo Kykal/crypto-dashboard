@@ -1,9 +1,9 @@
 import { create } from "zustand";
 
 //Types
-import type { Crypto } from "../types/coin";
+import type { CoinMarket } from "../types/coins-markets";
 export interface UseCryptos {
-  data: Crypto[];
+  data: CoinMarket[] | null;
   loading: boolean;
   error: any;
   setData: (
@@ -12,7 +12,7 @@ export interface UseCryptos {
 }
 
 const useCryptosStore = create<UseCryptos>()((set) => ({
-  data: [],
+  data: null,
   loading: true,
   error: null,
   setData: (data) => set(data),

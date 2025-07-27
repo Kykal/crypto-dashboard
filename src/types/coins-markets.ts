@@ -1,4 +1,4 @@
-export interface Crypto {
+export interface CoinMarket {
   id: string;
   symbol: string;
   name: string;
