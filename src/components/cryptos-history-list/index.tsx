@@ -10,9 +10,10 @@ import ListItem from "./list-item";
 
 //Main component
 const CryptosHistoryList = () => {
-  const { data, loading } = useCryptosStore();
+  const data = useCryptosStore((state) => state.data);
+  const loading = useCryptosStore((state) => state.loading);
 
-  const items = data.map((item) => <ListItem key={item.symbol} {...item} />);
+  const items = data?.map((item) => <ListItem key={item.symbol} {...item} />);
 
   //Main render
   return (
