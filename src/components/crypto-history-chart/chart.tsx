@@ -33,11 +33,10 @@ const Chart = () => {
     }
   );
 
-  const {
-    data: response,
-    error,
-    isLoading,
-  } = useSWR<CoinsIdMarketChart>(url, fetcher);
+  const { data: response, isLoading } = useSWR<CoinsIdMarketChart>(
+    url,
+    fetcher
+  );
 
   if (isLoading) {
     return <Text ta="center">Loading...</Text>;
