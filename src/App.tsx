@@ -11,7 +11,6 @@ const App = () => {
   //Main render
   return (
     <AppShell
-      p={10}
       header={{
         height: 75.2,
       }}
