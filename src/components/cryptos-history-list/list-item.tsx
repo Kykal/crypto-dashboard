@@ -11,9 +11,9 @@ import { Avatar, Group, Stack, Text } from "@mantine/core";
 
 //Types
 import type { DefaultMantineColor, StyleProp } from "@mantine/core";
-import type { Crypto } from "../../types/coin";
+import type { CoinMarket } from "../../types/coins-markets";
 import type { InputAttributes, NumericFormatProps } from "react-number-format";
-interface ListItemProps extends Crypto {}
+interface ListItemProps extends CoinMarket {}
 
 //Main component
 const ListItem = (props: ListItemProps) => {
