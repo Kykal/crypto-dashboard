@@ -11,7 +11,7 @@ const Main = () => {
   //Main render
   return (
     <AppShell.Main>
-      <Container size="lg">
+      <Container pt={20} size="lg">
         <Grid>
           <Grid.Col span={8}>
             <Card>
