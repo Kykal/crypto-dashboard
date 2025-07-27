@@ -8,6 +8,7 @@ import { StrictMode } from "react";
 
 //MATERIAL DESIGN
 import "@mantine/core/styles.css";
+import "@mantine/charts/styles.css";
 //Components
 import { MantineProvider } from "@mantine/core";
 
