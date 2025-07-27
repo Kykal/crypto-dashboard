@@ -1,8 +1,10 @@
+//ReactJS
+import { useState } from "react";
+import { useSearchParams } from "react-router";
+
 //MATERIAL DESIGN
 //Components
 import { SegmentedControl } from "@mantine/core";
-import { useState } from "react";
-import { useSearchParams } from "react-router";
 import { SearchParam } from "../../constants";
 
 //Main component
@@ -15,9 +17,12 @@ const FrequencySegmentedControl = () => {
 
   const onChangeHandler = (value: string) => {
     setValue(value);
-    setSearchParams({
-      [SearchParam.CRYPTOS_HISTORY_FREQUENCY]: value,
-    });
+
+    const newSearchParams = new URLSearchParams(searchParams);
+
+    newSearchParams.set(SearchParam.CRYPTOS_HISTORY_FREQUENCY, value);
+
+    setSearchParams(newSearchParams);
   };
 
   //Main render
@@ -32,12 +37,10 @@ const FrequencySegmentedControl = () => {
         {
           value: "6h",
           label: "6 h",
-          //   disabled: true,
         },
         {
           value: "12h",
           label: "12 h",
-          //   disabled: true,
         },
         {
           value: "24h",
