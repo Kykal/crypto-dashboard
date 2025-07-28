@@ -101,9 +101,17 @@ const TableRow = (props: TableRowProps) => {
         </Group>
       </Table.Td>
       <Table.Td>
+        {numericFormatter(String(props.current_price), {
+          thousandSeparator: " ",
+          fixedDecimalScale: true,
+          decimalScale: 2,
+        })}
+      </Table.Td>
+      <Table.Td>
         <Group gap={10}>
-          <Text>
-            {numericFormatter(String(props.current_price), {
+          <Text c="green.7">
+            {numericFormatter(String(props.price_change_24h), {
+              prefix: "+",
               thousandSeparator: " ",
               fixedDecimalScale: true,
               decimalScale: 2,
