@@ -93,10 +93,14 @@ const TableRow = (props: TableRowProps) => {
     <Table.Tr>
       <Table.Td>
         <Group>
-          <Avatar src={props.image} alt={props.name} />
+          <Avatar src={props.image} alt={props.name} visibleFrom="xs" />
+
           <Stack gap={0}>
             <Text component="span">{props.name}</Text>
-            <Text component="span" c="dimmed">
+            <Text component="span" c="dimmed" size="sm" hiddenFrom="md">
+              {props.symbol.toUpperCase()}
+            </Text>
+            <Text component="span" c="dimmed" visibleFrom="md">
               {props.symbol.toUpperCase()}
             </Text>
           </Stack>

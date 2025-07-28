@@ -14,12 +14,22 @@ const Main = () => {
     <AppShell.Main>
       <Container pt={20} size="xl">
         <Grid>
-          <Grid.Col span={8}>
+          <Grid.Col
+            span={{
+              xs: 12,
+              md: 8,
+            }}
+          >
             <Card h="100%">
               <CryptoHistoryChart />
             </Card>
           </Grid.Col>
-          <Grid.Col span={4}>
+          <Grid.Col
+            span={{
+              xs: 12,
+              md: 4,
+            }}
+          >
             <Card h="100%">
               <CryptosHistoryList />
             </Card>

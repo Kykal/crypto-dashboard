@@ -34,7 +34,12 @@ const ListItem = (props: ListItemProps) => {
       component="li"
       justify="space-between"
     >
-      <Avatar role="img" aria-label="Crypto currency icon" src={image}>
+      <Avatar
+        role="img"
+        aria-label="Crypto currency icon"
+        src={image}
+        visibleFrom="xs"
+      >
         {name[0]}
       </Avatar>
       <Stack gap={0} flex={1}>
