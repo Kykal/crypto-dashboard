@@ -14,7 +14,7 @@ import { MantineProvider } from "@mantine/core";
 
 //Components
 import App from "./App";
-import FetcherLoader from "./components/fetcher-loader";
+import FetcherLoader from "./components/organisms/fetcher-loader";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

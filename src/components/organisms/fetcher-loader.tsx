@@ -1,10 +1,10 @@
-import { api, fetcher, SearchParam } from "../constants";
-import urlWithSearchParams from "../utils/urlWithSearchParams";
+import { api, fetcher, SearchParam } from "../../constants";
+import urlWithSearchParams from "../../utils/urlWithSearchParams";
 
 //ReactJS
 import useSWR from "swr";
 import { useSearchParams } from "react-router";
-import useCryptosStore from "../store/use-cryptos-store";
+import useCryptosStore from "../../store/use-cryptos-store";
 import { useEffect } from "react";
 
 /**

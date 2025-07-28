@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import { numericFormatter } from "react-number-format";
-import { api, fetcher, SearchParam } from "../../constants";
-import urlWithSearchParams from "../../utils/urlWithSearchParams";
+import { api, fetcher, SearchParam } from "../../../constants";
+import urlWithSearchParams from "../../../utils/urlWithSearchParams";
 
 //ReactJS
 import useSWR from "swr";
@@ -13,7 +13,7 @@ import { LineChart } from "@mantine/charts";
 import { Group, Paper, Stack, Text, Title } from "@mantine/core";
 
 //Types
-import type { CoinsIdMarketChart } from "../../types/coins-id-market-chart";
+import type { CoinsIdMarketChart } from "../../../types/coins-id-market-chart";
 import type { LineChartSeries } from "@mantine/charts";
 
 //Main component

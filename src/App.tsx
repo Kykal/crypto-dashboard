@@ -3,8 +3,8 @@
 import { AppShell } from "@mantine/core";
 
 //Components
-import Header from "./components/header";
-import Main from "./components/main";
+import Header from "./components/molecules/header";
+import Main from "./components/organisms/main";
 
 //Main component
 const App = () => {

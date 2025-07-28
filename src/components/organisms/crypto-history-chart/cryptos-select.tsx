@@ -1,9 +1,9 @@
-import { SearchParam } from "../../constants";
+import { SearchParam } from "../../../constants";
 
 //ReactJS
 import { useState } from "react";
 import { useSearchParams } from "react-router";
-import useCryptosStore from "../../store/use-cryptos-store";
+import useCryptosStore from "../../../store/use-cryptos-store";
 
 //MATERIAL DESIGN
 //Components

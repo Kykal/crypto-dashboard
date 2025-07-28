@@ -5,14 +5,14 @@ import { useSearchParams } from "react-router";
 //MATERIAL DESIGN
 //Components
 import { SegmentedControl } from "@mantine/core";
-import { SearchParam } from "../../constants";
+import { SearchParam } from "../../../constants";
 
 //Main component
 const FrequencySegmentedControl = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [value, setValue] = useState<string>(
-    searchParams.get(SearchParam.CRYPTO_HISTORY_FREQUENCY) ?? "7d"
+    searchParams.get(SearchParam.CRYPTOS_HISTORY_FREQUENCY) ?? "24h"
   );
 
   const onChangeHandler = (value: string) => {
@@ -20,7 +20,7 @@ const FrequencySegmentedControl = () => {
 
     const newSearchParams = new URLSearchParams(searchParams);
 
-    newSearchParams.set(SearchParam.CRYPTO_HISTORY_FREQUENCY, value);
+    newSearchParams.set(SearchParam.CRYPTOS_HISTORY_FREQUENCY, value);
 
     setSearchParams(newSearchParams);
   };
@@ -28,23 +28,20 @@ const FrequencySegmentedControl = () => {
   //Main render
   return (
     <SegmentedControl
-      size="xs"
-      withItemsBorders={false}
-      radius="xl"
       value={value}
       onChange={onChangeHandler}
       data={[
         {
-          value: "1d",
-          label: "1 d",
+          value: "6h",
+          label: "6 h",
         },
         {
-          value: "7d",
-          label: "7 d",
+          value: "12h",
+          label: "12 h",
         },
         {
-          value: "1m",
-          label: "1 M",
+          value: "24h",
+          label: "24 h",
         },
       ]}
     />

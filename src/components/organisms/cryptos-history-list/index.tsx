@@ -1,4 +1,4 @@
-import useCryptosStore from "../../store/use-cryptos-store";
+import useCryptosStore from "../../../store/use-cryptos-store";
 
 //MATERIAL DESIGN
 //Components

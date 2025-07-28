@@ -2,14 +2,19 @@
 //Components
 import {
   ActionIcon,
+  Tooltip,
   useComputedColorScheme,
   useMantineColorScheme,
 } from "@mantine/core";
 //Icons
 import { IconSun, IconMoon } from "@tabler/icons-react";
 
+//Types
+import type { ActionIconProps } from "@mantine/core";
+interface ThemeToggleActionProps extends Omit<ActionIconProps, "onClick"> {}
+
 //Main component
-const ThemeToggleAction = () => {
+const ThemeToggleAction = (props: ThemeToggleActionProps) => {
   const { setColorScheme, colorScheme } = useMantineColorScheme();
 
   const computedColorScheme = useComputedColorScheme();
@@ -21,15 +26,12 @@ const ThemeToggleAction = () => {
 
   //Main render
   return (
-    <ActionIcon
-      aria-label="Theme"
-      variant="default"
-      size="lg"
-      onClick={onClickHandler}
-    >
-      {icon}
-    </ActionIcon>
+    <Tooltip label="Toggle theme">
+      <ActionIcon aria-label="Theme" onClick={onClickHandler} {...props}>
+        {icon}
+      </ActionIcon>
+    </Tooltip>
   );
 };
 
-export default ThemeToggleAction; // Export main component
+export default ThemeToggleAction; // Export main componentw
