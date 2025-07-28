@@ -1,9 +1,8 @@
 //MATERIAL DESIGN
-import { createTheme, SegmentedControl } from "@mantine/core";
+import { createTheme } from "@mantine/core";
 
 const theme = createTheme({
   components: {
-    AppShell: {},
     ActionIcon: {
       defaultProps: {
         size: "lg",
