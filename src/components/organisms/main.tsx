@@ -14,12 +14,12 @@ const Main = () => {
       <Container pt={20} size="xl">
         <Grid>
           <Grid.Col span={8}>
-            <Card>
+            <Card h="100%">
               <CryptoHistoryChart />
             </Card>
           </Grid.Col>
           <Grid.Col span={4}>
-            <Card>
+            <Card h="100%">
               <CryptosHistoryList />
             </Card>
           </Grid.Col>
