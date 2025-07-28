@@ -10,66 +10,124 @@ import { useSearchParams } from "react-router";
 //MATERIAL DESIGN
 //Components
 import { LineChart } from "@mantine/charts";
-import { Group, Paper, Stack, Text, Title } from "@mantine/core";
+import {
+  Avatar,
+  Group,
+  Image,
+  Paper,
+  Skeleton,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
 
 //Types
 import type { CoinsIdMarketChart } from "../../../types/coins-id-market-chart";
 import type { LineChartSeries } from "@mantine/charts";
+import type { CoinId } from "../../../types/coins-id";
+interface GenericProps {
+  crypto: string;
+  frequency: string;
+}
 
 //Main component
-const Chart = () => {
+const CryptoInformation = () => {
   const [searchParams] = useSearchParams();
 
-  const selectedCrypto = searchParams.get(SearchParam.CRYPTO) ?? "";
-  const selectedFrequency =
+  const crypto = searchParams.get(SearchParam.CRYPTO);
+  const frequency =
     searchParams.get(SearchParam.CRYPTO_HISTORY_FREQUENCY) ?? "7d";
 
-  const url = urlWithSearchParams(
-    api.coins.id(selectedCrypto).market_chart.path,
-    {
-      vs_currency: "usd",
-      days: selectedFrequency,
-      precision: 2,
-    }
+  if (!crypto) {
+    return (
+      <Text c="dimmed" ta="center">
+        Select a crypto curency
+      </Text>
+    );
+  }
+
+  //Main render
+  return (
+    <Stack gap={10}>
+      <BasicInformation crypto={crypto} frequency={frequency} />
+      <CrypyoGraph crypto={crypto} frequency={frequency} />
+    </Stack>
   );
+};
+
+export default CryptoInformation; // Export main component
+
+const BasicInformation = (props: GenericProps) => {
+  const { crypto } = props;
+
+  const url = urlWithSearchParams(api.coins.id(crypto).path, {
+    id: crypto,
+    localization: false,
+    tickers: false,
+    market_data: false,
+    community_data: false,
+    developers_data: false,
+    sparkline: false,
+  });
+
+  const { data, error, isLoading } = useSWR<CoinId>(url, fetcher);
+
+  return (
+    <>
+      <Skeleton visible={isLoading}>
+        <Group align="center">
+          <Group align="center">
+            <Avatar src={data?.image.large} alt={data?.name} />
+            <Stack gap={0}>
+              <Title order={2}>{data?.name ?? "Crypto name"}</Title>
+              <Text size="sm" c="dimmed">
+                {data?.symbol.toUpperCase() ?? "Crypto symbol"}
+              </Text>
+            </Stack>
+          </Group>
+        </Group>
+      </Skeleton>
+    </>
+  );
+};
+
+const CrypyoGraph = (props: GenericProps) => {
+  const { crypto, frequency } = props;
+
+  const url = urlWithSearchParams(api.coins.id(crypto).market_chart.path, {
+    vs_currency: "usd",
+    days: frequency,
+    precision: 2,
+  });
 
   const { data: response, isLoading } = useSWR<CoinsIdMarketChart>(
     url,
     fetcher
   );
 
-  if (isLoading) {
-    return <Text ta="center">Loading...</Text>;
-  }
-
-  if ((response as any as { error: string })?.error) {
+  if (!isLoading && (response as any as { error: string })?.error) {
     return (
-      <Text ta="center" c="red.7">
+      <Text ta="center" c="red.7" h={300}>
         Error
       </Text>
     );
   }
 
-  if (!response) {
-    return <Text ta="center">No data</Text>;
+  if (!isLoading && !response) {
+    return (
+      <Text ta="center" h={300}>
+        No data
+      </Text>
+    );
   }
 
-  const data = response.prices.map((item) => ({
+  const data = response?.prices.map((item) => ({
     timestamp: item[0],
     value: item[1],
   }));
 
-  //Main render
   return (
-    <Stack gap={10}>
-      <Group>
-        <Stack gap={0}>
-          <Title order={2}>{selectedCrypto}</Title>
-          <Text size="sm" c="dimmed">
-            BTC
-          </Text>
-        </Stack>
-      </Group>
+    <Skeleton visible={isLoading}>
       <LineChart
         h={500}
         curveType="linear"
@@ -114,14 +172,12 @@ const Chart = () => {
           },
         }}
         dataKey="timestamp"
-        data={data}
+        data={data ?? []}
         series={series}
       />
-    </Stack>
+    </Skeleton>
   );
 };
-
-export default Chart; // Export main component
 
 const series: LineChartSeries[] = [
   {

@@ -3,7 +3,7 @@
 import { Group, Stack } from "@mantine/core";
 
 //Components
-import Chart from "./chart";
+import CryptoInformation from "./crypto-information";
 import CryptosSelect from "./cryptos-select";
 import FrequencySegmentedControl from "./frequency-segmented-control";
 
@@ -11,12 +11,18 @@ import FrequencySegmentedControl from "./frequency-segmented-control";
 const CryptoHistoryChart = () => {
   //Main render
   return (
-    <Stack>
-      <Group justify="space-between">
-        <CryptosSelect />
-        <FrequencySegmentedControl />
+    <Stack
+      style={{
+        position: "relative",
+      }}
+    >
+      <Group align="center" justify="flex-end">
+        <Group gap={20} align="center">
+          <CryptosSelect />
+          <FrequencySegmentedControl />
+        </Group>
       </Group>
-      <Chart />
+      <CryptoInformation />
     </Stack>
   );
 };
