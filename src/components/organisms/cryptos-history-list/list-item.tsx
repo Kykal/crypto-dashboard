@@ -28,16 +28,30 @@ const ListItem = (props: ListItemProps) => {
 
   //Main render
   return (
-    <Group justify="space-between">
-      <Avatar src={image}>{name[0]}</Avatar>
+    <Group
+      role="listitem"
+      aria-label={`${name} crypto currency information`}
+      component="li"
+      justify="space-between"
+    >
+      <Avatar role="img" aria-label="Crypto currency icon" src={image}>
+        {name[0]}
+      </Avatar>
       <Stack gap={0} flex={1}>
-        <Text component="span">{name}</Text>
-        <Text component="span" size="sm" c="dimmed">
+        <Text aria-label="Crypto currency name" component="span">
+          {name}
+        </Text>
+        <Text
+          aria-label="Crypto currency symbol"
+          component="span"
+          size="sm"
+          c="dimmed"
+        >
           {symbol.toUpperCase()}
         </Text>
       </Stack>
       <Stack gap={0} justify="flex-end">
-        <Text component="span" ta="end" fw="bold">
+        <Text aria-label="Crypto currency " component="span" ta="end" fw="bold">
           {numericFormatter(
             String(current_price),
             currencyNumericFormatterOptions

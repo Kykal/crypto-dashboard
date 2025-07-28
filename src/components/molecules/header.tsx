@@ -1,11 +1,10 @@
 //MATERIAL DESIGN
 //Components
-import { ActionIcon, AppShell, Group, Title, Tooltip } from "@mantine/core";
-//Icons
-import { IconBrandGithub } from "@tabler/icons-react";
+import { AppShell, Group, Title } from "@mantine/core";
 
 //Components
 import ThemeToggleAction from "../atoms/theme-toggle-action";
+import GithhubProjectAction from "../atoms/githhub-project-action";
 
 //Main component
 const Header = () => {
@@ -15,17 +14,7 @@ const Header = () => {
       <Group align="center" justify="space-between" px={25} py={15}>
         <Title order={1}>Crypto dashboard</Title>
         <Group gap={10}>
-          <Tooltip label="Github project">
-            <ActionIcon
-              component="a"
-              href="https://github.com/Kykal/crypto-dashboard"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Open Github project in a new tab"
-            >
-              <IconBrandGithub role="graphics-symbol" />
-            </ActionIcon>
-          </Tooltip>
+          <GithhubProjectAction />
           <ThemeToggleAction />
         </Group>
       </Group>

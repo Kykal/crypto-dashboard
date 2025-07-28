@@ -19,7 +19,12 @@ const ThemeToggleAction = (props: ThemeToggleActionProps) => {
 
   const computedColorScheme = useComputedColorScheme();
 
-  const icon = colorScheme === "dark" ? <IconSun /> : <IconMoon />;
+  const icon =
+    colorScheme === "dark" ? (
+      <IconSun role="graphics-symbol" />
+    ) : (
+      <IconMoon role="graphics-symbol" />
+    );
 
   const onClickHandler = () =>
     setColorScheme(computedColorScheme === "dark" ? "light" : "dark");

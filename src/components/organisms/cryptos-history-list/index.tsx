@@ -24,7 +24,9 @@ const CryptosHistoryList = () => {
         </Title>
         <FrequencySegmentedControl />
       </Group>
-      {loading ? <Text c="dimmed">Loading...</Text> : items}
+      <Stack component="ol" m={0} p={0}>
+        {loading ? <Text c="dimmed">Loading...</Text> : items}
+      </Stack>
     </Stack>
   );
 };
