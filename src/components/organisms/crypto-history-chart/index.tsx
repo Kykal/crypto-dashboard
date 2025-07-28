@@ -1,6 +1,6 @@
 //MATERIAL DESIGN
 //Components
-import { Group, Stack } from "@mantine/core";
+import { Group, Stack, Title } from "@mantine/core";
 
 //Components
 import CryptoInformation from "./crypto-information";
@@ -12,7 +12,10 @@ const CryptoHistoryChart = () => {
   //Main render
   return (
     <Stack>
-      <Group align="center" justify="flex-end">
+      <Group align="center" justify="space-between">
+        <Title order={2} c="dimmed" size="md">
+          Crypto tendency
+        </Title>
         <Group gap={20} align="center">
           <CryptosSelect />
           <FrequencySegmentedControl />
