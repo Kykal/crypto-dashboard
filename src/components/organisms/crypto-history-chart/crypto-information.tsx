@@ -13,18 +13,19 @@ import { LineChart } from "@mantine/charts";
 import {
   Avatar,
   Group,
-  Image,
   Paper,
   Skeleton,
   Stack,
   Text,
   Title,
+  Tooltip,
 } from "@mantine/core";
 
 //Types
 import type { CoinsIdMarketChart } from "../../../types/coins-id-market-chart";
 import type { LineChartSeries } from "@mantine/charts";
 import type { CoinId } from "../../../types/coins-id";
+import { dynamicColor } from "../../../utils/dynamicIndicators";
 interface GenericProps {
   crypto: string;
   frequency: string;
@@ -79,10 +80,45 @@ const BasicInformation = (props: GenericProps) => {
             <Avatar src={data?.image.large} alt={data?.name} />
             <Stack gap={0}>
               <Title order={2}>{data?.name ?? "Crypto name"}</Title>
-              <Text size="sm" c="dimmed">
+              <Text component="span" size="sm" c="dimmed">
                 {data?.symbol.toUpperCase() ?? "Crypto symbol"}
               </Text>
             </Stack>
+            <Tooltip label="Last 24 hours">
+              <Group gap={5} align="center">
+                <Text
+                  component="span"
+                  c={dynamicColor(data?.market_data.price_change_24h!)}
+                >
+                  {numericFormatter(
+                    String(data?.market_data.price_change_24h),
+                    {
+                      thousandSeparator: " ",
+                      fixedDecimalScale: true,
+                      decimalScale: 2,
+                    }
+                  )}
+                </Text>
+                <Text
+                  component="span"
+                  c={dynamicColor(
+                    data?.market_data.price_change_percentage_24h!
+                  )}
+                >
+                  (
+                  {numericFormatter(
+                    String(data?.market_data.price_change_percentage_24h),
+                    {
+                      suffix: "%",
+                      thousandSeparator: " ",
+                      fixedDecimalScale: true,
+                      decimalScale: 2,
+                    }
+                  )}
+                  )
+                </Text>
+              </Group>
+            </Tooltip>
           </Group>
           <Text size="xl" fw="bold">
             {numericFormatter(String(data?.market_data.current_price.usd), {
