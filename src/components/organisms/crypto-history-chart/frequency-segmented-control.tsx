@@ -40,8 +40,16 @@ const FrequencySegmentedControl = () => {
           label: "7 d",
         },
         {
-          value: "1m",
+          value: "30d",
           label: "1 m",
+        },
+        {
+          value: "180d",
+          label: "6 m",
+        },
+        {
+          value: "365d",
+          label: "1 y",
         },
       ]}
     />
