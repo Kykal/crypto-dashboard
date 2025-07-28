@@ -64,7 +64,6 @@ const BasicInformation = (props: GenericProps) => {
     id: crypto,
     localization: false,
     tickers: false,
-    market_data: false,
     community_data: false,
     developers_data: false,
     sparkline: false,
@@ -75,7 +74,7 @@ const BasicInformation = (props: GenericProps) => {
   return (
     <>
       <Skeleton visible={isLoading}>
-        <Group align="center">
+        <Group align="center" justify="space-between">
           <Group align="center">
             <Avatar src={data?.image.large} alt={data?.name} />
             <Stack gap={0}>
@@ -85,6 +84,13 @@ const BasicInformation = (props: GenericProps) => {
               </Text>
             </Stack>
           </Group>
+          <Text size="xl" fw="bold">
+            {numericFormatter(String(data?.market_data.current_price.usd), {
+              thousandSeparator: " ",
+              fixedDecimalScale: true,
+              decimalScale: 2,
+            })}
+          </Text>
         </Group>
       </Skeleton>
     </>
