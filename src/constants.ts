@@ -14,10 +14,12 @@ export const api = {
   },
 } as const;
 
-export const fetcher = (...args: any) =>
-  fetch(...args, {
+export const fetcher = (input: RequestInfo, init?: RequestInit) =>
+  fetch(input, {
+    ...init,
     method: "GET",
     headers: {
+      ...init?.headers,
       accept: "application/json",
       "x-cg-demo-api-key": import.meta.env.VITE_API_KEY,
     },
