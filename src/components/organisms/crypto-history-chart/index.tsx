@@ -11,11 +11,7 @@ import FrequencySegmentedControl from "./frequency-segmented-control";
 const CryptoHistoryChart = () => {
   //Main render
   return (
-    <Stack
-      style={{
-        position: "relative",
-      }}
-    >
+    <Stack>
       <Group align="center" justify="flex-end">
         <Group gap={20} align="center">
           <CryptosSelect />
