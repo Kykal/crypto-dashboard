@@ -5,6 +5,7 @@ import { AppShell, Card, Container, Grid } from "@mantine/core";
 //Components
 import CryptoHistoryChart from "./crypto-history-chart";
 import CryptosHistoryList from "./cryptos-history-list";
+import TopCryptosWithPositiveTrend from "./top-cryptos-with-positive-trend";
 
 //Main component
 const Main = () => {
@@ -21,6 +22,11 @@ const Main = () => {
           <Grid.Col span={4}>
             <Card h="100%">
               <CryptosHistoryList />
+            </Card>
+          </Grid.Col>
+          <Grid.Col span={12}>
+            <Card h="100%">
+              <TopCryptosWithPositiveTrend />
             </Card>
           </Grid.Col>
         </Grid>
