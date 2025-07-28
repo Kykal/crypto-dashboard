@@ -49,6 +49,18 @@ const TableBody = () => {
     isLoading,
   } = useSWR<CoinMarket[]>(url, fetcher);
 
+  if (error) {
+    return (
+      <Table.Tr h={64.6}>
+        <Table.Td colSpan={2}>
+          <Text ta="center" c="red.7" size="md">
+            Error
+          </Text>
+        </Table.Td>
+      </Table.Tr>
+    );
+  }
+
   if (isLoading) {
     return (
       <Table.Tr h={64.6}>
