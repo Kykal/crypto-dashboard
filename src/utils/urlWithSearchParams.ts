@@ -1,6 +1,6 @@
 const urlWithSearchParams = (
   baseUrl: string,
-  searchParams: Record<string, string | number>
+  searchParams: Record<string, string | number | boolean>
 ) => {
   const url = new URL(baseUrl);
 
