@@ -41,7 +41,7 @@ const FrequencySegmentedControl = () => {
         },
         {
           value: "1m",
-          label: "1 M",
+          label: "1 m",
         },
       ]}
     />
