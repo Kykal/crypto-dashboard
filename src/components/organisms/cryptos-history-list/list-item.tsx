@@ -1,3 +1,4 @@
+import { dynamicColor } from "../../../utils/dynamicIndicators";
 const currencyNumericFormatterOptions: NumericFormatProps<InputAttributes> = {
   decimalScale: 2,
   fixedDecimalScale: true,
@@ -10,7 +11,6 @@ import { numericFormatter } from "react-number-format";
 import { Avatar, Group, Stack, Text } from "@mantine/core";
 
 //Types
-import type { DefaultMantineColor, StyleProp } from "@mantine/core";
 import type { CoinMarket } from "../../../types/coins-markets";
 import type { InputAttributes, NumericFormatProps } from "react-number-format";
 interface ListItemProps extends CoinMarket {}
@@ -82,19 +82,3 @@ const ListItem = (props: ListItemProps) => {
 };
 
 export default ListItem; // Export main component
-
-// Sets the color if it gained, lost or held its value
-const dynamicColor = (
-  value: number
-): StyleProp<DefaultMantineColor> | undefined => {
-  // Lost
-  if (value < 0) {
-    return "red.7";
-  }
-
-  if (value > 0) {
-    return "green.7";
-  }
-
-  return undefined;
-};
