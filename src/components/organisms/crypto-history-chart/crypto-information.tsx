@@ -42,7 +42,7 @@ const CryptoInformation = () => {
   if (!crypto) {
     return (
       <Text c="dimmed" ta="center">
-        Select a crypto curency
+        Select a crypto currency
       </Text>
     );
   }
