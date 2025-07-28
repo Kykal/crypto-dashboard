@@ -1,5 +1,5 @@
 import { api, fetcher, SearchParam } from "../../constants";
-import urlWithSearchParams from "../../utils/urlWithSearchParams";
+import urlWithSearchParams from "../../utils/url-with-search-params";
 
 //ReactJS
 import useSWR from "swr";

@@ -1,4 +1,4 @@
-import { dynamicColor } from "../../../utils/dynamicIndicators";
+import { dynamicColor } from "../../../utils/dynamic-indicators";
 const currencyNumericFormatterOptions: NumericFormatProps<InputAttributes> = {
   decimalScale: 2,
   fixedDecimalScale: true,

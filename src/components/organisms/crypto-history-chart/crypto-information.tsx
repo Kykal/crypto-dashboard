@@ -1,8 +1,8 @@
 import dayjs from "dayjs";
 import { numericFormatter } from "react-number-format";
 import { api, fetcher, SearchParam } from "../../../constants";
-import urlWithSearchParams from "../../../utils/urlWithSearchParams";
-import { dynamicColor } from "../../../utils/dynamicIndicators";
+import urlWithSearchParams from "../../../utils/url-with-search-params";
+import { dynamicColor } from "../../../utils/dynamic-indicators";
 
 //ReactJS
 import useSWR from "swr";
