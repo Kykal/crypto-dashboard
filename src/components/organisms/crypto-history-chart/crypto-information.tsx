@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import { numericFormatter } from "react-number-format";
 import { api, fetcher, SearchParam } from "../../../constants";
 import urlWithSearchParams from "../../../utils/urlWithSearchParams";
+import { dynamicColor } from "../../../utils/dynamicIndicators";
 
 //ReactJS
 import useSWR from "swr";
@@ -25,7 +26,6 @@ import {
 import type { CoinsIdMarketChart } from "../../../types/coins-id-market-chart";
 import type { LineChartSeries } from "@mantine/charts";
 import type { CoinId } from "../../../types/coins-id";
-import { dynamicColor } from "../../../utils/dynamicIndicators";
 interface GenericProps {
   crypto: string;
   frequency: string;
