@@ -2,7 +2,7 @@ import useCryptosStore from "../../../store/use-cryptos-store";
 
 //MATERIAL DESIGN
 //Components
-import { Group, Stack, Text, Title } from "@mantine/core";
+import { Group, Skeleton, Stack, Title } from "@mantine/core";
 
 //Components
 import FrequencySegmentedControl from "./frequency-segmented-control";
@@ -24,9 +24,11 @@ const CryptosHistoryList = () => {
         </Title>
         <FrequencySegmentedControl />
       </Group>
-      <Stack component="ol" m={0} p={0}>
-        {loading ? <Text c="dimmed">Loading...</Text> : items}
-      </Stack>
+      <Skeleton visible={loading} h={595}>
+        <Stack component="ol" m={0} p={0}>
+          {items}
+        </Stack>
+      </Skeleton>
     </Stack>
   );
 };
