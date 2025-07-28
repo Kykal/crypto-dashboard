@@ -7,6 +7,9 @@ import { useSearchParams } from "react-router";
 import useCryptosStore from "../../store/use-cryptos-store";
 import { useEffect } from "react";
 
+//Types
+import type { CoinMarketQueryParams } from "../../types/coins-markets";
+
 /**
  * Fetch shared information.
  */
@@ -37,7 +40,7 @@ const CryptoStoreFetcher = () => {
     page: 1,
     precision: 2,
     price_change_percentage: cryptosHistoryFrequencySearchParam ?? "24h",
-  });
+  } satisfies CoinMarketQueryParams);
 
   const { data, error, isLoading } = useSWR(url, fetcher);
 

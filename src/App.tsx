@@ -4,7 +4,7 @@ import { AppShell, useComputedColorScheme } from "@mantine/core";
 
 //Components
 import Header from "./components/molecules/header";
-import Main from "./components/organisms/main";
+import Main from "./components/molecules/main";
 
 //Main component
 const App = () => {

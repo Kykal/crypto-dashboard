@@ -3,9 +3,9 @@
 import { AppShell, Card, Container, Grid } from "@mantine/core";
 
 //Components
-import CryptoHistoryChart from "./crypto-history-chart";
-import CryptosHistoryList from "./cryptos-history-list";
-import TopCryptosWithPositiveTrend from "./top-cryptos-with-positive-trend";
+import CryptoHistoryChart from "../organisms/crypto-history-chart";
+import CryptosHistoryList from "../organisms/cryptos-history-list";
+import TopCryptosWithPositiveTrend from "../organisms/top-cryptos-with-positive-trend";
 
 //Main component
 const Main = () => {
