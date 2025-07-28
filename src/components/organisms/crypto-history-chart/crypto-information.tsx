@@ -72,6 +72,14 @@ const BasicInformation = (props: GenericProps) => {
 
   const { data, error, isLoading } = useSWR<CoinId>(url, fetcher);
 
+  if (error) {
+    return (
+      <Text ta="center" c="error.7">
+        Error
+      </Text>
+    );
+  }
+
   return (
     <>
       <Skeleton visible={isLoading}>
