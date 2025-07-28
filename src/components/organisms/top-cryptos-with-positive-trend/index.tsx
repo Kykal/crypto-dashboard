@@ -12,7 +12,7 @@ const TopCryptosWithPositiveTrend = () => {
     <Stack>
       <Group align="center" justify="space-between">
         <Title order={2} c="dimmed" size="md">
-          Top positive tendency cryptos
+          Top positive trending cryptos
         </Title>
         <SegmentedControl
           data={[

@@ -23,6 +23,7 @@ const PositiveTrendingTable = () => {
         <Table.Tr>
           <Table.Th>Crypto</Table.Th>
           <Table.Th>Current price</Table.Th>
+          <Table.Th>Trending</Table.Th>
         </Table.Tr>
       </Table.Thead>
       <Table.Tbody>
