@@ -204,7 +204,7 @@ const CrypyoGraph = (props: GenericProps) => {
 
             return (
               <Paper withBorder px="md" py="sm" shadow="md">
-                <Text c="white" fw={500} mb={5}>
+                <Text fw={500} mb={5}>
                   {dayjs(label).format("dddd, MMMM DD, YYYY")}
                 </Text>
                 <Text c="dimmed" size="xs" fw={500} mb={5}>
