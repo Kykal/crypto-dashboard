@@ -110,7 +110,6 @@ const TableRow = (props: TableRowProps) => {
         {numericFormatter(String(props.current_price), {
           thousandSeparator: " ",
           fixedDecimalScale: true,
-          decimalScale: 2,
         })}
       </Table.Td>
       <Table.Td>
@@ -120,7 +119,6 @@ const TableRow = (props: TableRowProps) => {
               prefix: "+",
               thousandSeparator: " ",
               fixedDecimalScale: true,
-              decimalScale: 2,
             })}
           </Text>
           <Text c="green.7">
