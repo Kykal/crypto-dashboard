@@ -6,7 +6,9 @@ Display a dashboard with charts that conveys information about crypto currencies
 # Table of contents
 1. [Steps](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#steps)
    1. [Design](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#design)
-   2. [Develop](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#develop)
+        1. [References](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#references)
+        2. [Wireframe](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#wireframe)
+   3. [Develop](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#develop)
         1. [Technologies](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#technologies)
 # Steps
 ## Design
