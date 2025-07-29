@@ -10,6 +10,7 @@ Display a dashboard with charts that conveys information about crypto currencies
         2. [Wireframe](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#wireframe)
    3. [Develop](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#develop)
         1. [Technologies](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#technologies)
+2. Extraofficial features
 # Steps
 ## Design
 Figma design page: https://www.figma.com/design/WGNpOpz0X6odhltvPcqz9Y/CRYPTO-DASHBOARD?node-id=4-15&p=f
@@ -37,3 +38,9 @@ I used several tecnologies to develop this web application, like
 |@mantine/dates|8.2.1||
 |@mantine/hooks|8.2.1||
 |@mantine/notifications|8.2.1||
+
+# Extra official features
+## More date range data
+- Besides only displaying 7 days and 24 hours date range of data, sometimes the user wants to visualzie more than that, so that's why I added more options, like 1 day, 6 months, 1 year, etc.
+## Quick data of top 10 leading crypto currencies
+- Only displaying the selected crypto currency was a very limited choice, so that's why I added a quick-view of the same cryptos with their data, like image, symbol, name, current price, trending price, trending percentage.
