@@ -4,15 +4,15 @@ Web application: https://crypto-dashboard-nine-steel.vercel.app/
 Display a dashboard with charts that conveys information about crypto currencies; user can select among 10 top currencies that are leading the market; visualize its trending between several date ranges; visualize top 5 positive trending crypto currencies.
 
 # Table of contents
-1. [Steps](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#steps)
-   1. [Design](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#design)
-        1. [References](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#references)
-        2. [Wireframe](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#wireframe)
-   3. [Develop](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#develop)
-        1. [Technologies](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#technologies)
-2. [Extraofficial features](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#extra-official-features)
-   1. [More date range data](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#more-date-range-data)
-   2. [Quick data of top 10 leading crypto currencies](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#more-date-range-data)
+1. [Steps](#steps)
+   1. [Design](#design)
+        1. [References](#references)
+        2. [Wireframe](#wireframe)
+   3. [Develop](#develop)
+        1. [Technologies](#technologies)
+2. [Extraofficial features](#extra-official-features)
+   1. [More date range data](#more-date-range-data)
+   2. [Quick data of top 10 leading crypto currencies](#more-date-range-data)
 # Steps
 ## Design
 Figma design page: https://www.figma.com/design/WGNpOpz0X6odhltvPcqz9Y/CRYPTO-DASHBOARD?node-id=4-15&p=f
