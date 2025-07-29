@@ -1,9 +1,10 @@
 # Crypto dashboard
 
 # Table of contents
-1. Steps
-3. Design
-3. Develop
+1. [Steps](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#steps)
+   1. [Design](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#design)
+   2. [Develop](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#develop)
+        1. [Technologies](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#technologies)
 # Steps
 ## Design
 - Get references of currencies/company shares dashboards
