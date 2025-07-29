@@ -40,6 +40,8 @@ export default PositiveTrendingTable; // Export main component
 const TableBody = () => {
   const url = urlWithSearchParams(api.coins.markets.path, {
     vs_currency: "usd",
+    price_change_percentage: "24h",
+    precision: "full",
     page: 1,
     per_page: 100,
     order: "market_cap_desc",
