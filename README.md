@@ -1,4 +1,7 @@
 # Crypto dashboard
+Web application: https://crypto-dashboard-nine-steel.vercel.app/
+
+Display a dashboard with charts that conveys information about crypto currencies; user can select among 10 top currencies that are leading the market; visualize its trending between several date ranges; visualize top 5 positive trending crypto currencies.
 
 # Table of contents
 1. [Steps](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#steps)
@@ -7,8 +10,16 @@
         1. [Technologies](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#technologies)
 # Steps
 ## Design
+Figma design page: https://www.figma.com/design/WGNpOpz0X6odhltvPcqz9Y/CRYPTO-DASHBOARD?node-id=4-15&p=f
+### References
 - Get references of currencies/company shares dashboards
+
+This is important because this is where ideas come from, due to missing information about how crypto currencies dashboards and shares dashboards looks like, it is a good exercise to research and get some references to apply to the project.
+### Wireframe
 - Make the wireframe (scrappy idea of what the web aplication should look like)
+
+Only a very superficial idea of how the web application should look like, nothing too worked, only the concepts, comments, etc.
+
 ## Develop
 ### Technologies
 I used several tecnologies to develop this web application, like
