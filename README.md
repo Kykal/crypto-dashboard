@@ -10,7 +10,9 @@ Display a dashboard with charts that conveys information about crypto currencies
         2. [Wireframe](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#wireframe)
    3. [Develop](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#develop)
         1. [Technologies](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#technologies)
-2. Extraofficial features
+2. [Extraofficial features](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#extra-official-features)
+   1. [More date range data](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#more-date-range-data)
+   2. [Quick data of top 10 leading crypto currencies](https://github.com/Kykal/crypto-dashboard/tree/main?tab=readme-ov-file#more-date-range-data)
 # Steps
 ## Design
 Figma design page: https://www.figma.com/design/WGNpOpz0X6odhltvPcqz9Y/CRYPTO-DASHBOARD?node-id=4-15&p=f
