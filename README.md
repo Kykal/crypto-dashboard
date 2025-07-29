@@ -46,3 +46,8 @@ I used several tecnologies to develop this web application, like
 - Besides only displaying 7 days and 24 hours date range of data, sometimes the user wants to visualzie more than that, so that's why I added more options, like 1 day, 6 months, 1 year, etc.
 ## Quick data of top 10 leading crypto currencies
 - Only displaying the selected crypto currency was a very limited choice, so that's why I added a quick-view of the same cryptos with their data, like image, symbol, name, current price, trending price, trending percentage.
+## Gain, lost and held
+- To provide clearer feedback on whether a cryptocurrency has gained, lost, or held its value, I’ve added a color indicator. We’re all familiar with the typical use of green, red, and grey when representing changes in value
+   - Green: value increased
+   - Red: value decreased
+   - Grey: value remained the same
