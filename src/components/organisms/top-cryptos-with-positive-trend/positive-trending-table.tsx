@@ -20,18 +20,20 @@ interface TableRowProps extends CoinMarket {}
 const PositiveTrendingTable = () => {
   //Main render
   return (
-    <Table highlightOnHover>
-      <Table.Thead>
-        <Table.Tr>
-          <Table.Th>Crypto</Table.Th>
-          <Table.Th>Current price</Table.Th>
-          <Table.Th>Trending</Table.Th>
-        </Table.Tr>
-      </Table.Thead>
-      <Table.Tbody>
-        <TableBody />
-      </Table.Tbody>
-    </Table>
+    <Table.ScrollContainer minWidth={550}>
+      <Table highlightOnHover>
+        <Table.Thead>
+          <Table.Tr>
+            <Table.Th>Crypto</Table.Th>
+            <Table.Th>Current price</Table.Th>
+            <Table.Th>Trending</Table.Th>
+          </Table.Tr>
+        </Table.Thead>
+        <Table.Tbody>
+          <TableBody />
+        </Table.Tbody>
+      </Table>
+    </Table.ScrollContainer>
   );
 };
 
