@@ -15,7 +15,7 @@ Display a dashboard with charts that conveys information about crypto currencies
    2. [Quick data of top 10 leading crypto currencies](#more-date-range-data)
 # Steps
 ## Design
-Figma design page: https://www.figma.com/design/WGNpOpz0X6odhltvPcqz9Y/CRYPTO-DASHBOARD?node-id=4-15&p=f
+Figma design page: https://www.figma.com/design/WGNpOpz0X6odhltvPcqz9Y/CRYPTO-DASHBOARD?node-id=0-1&p=f
 ### References
 - Get references of currencies/company shares dashboards
 
